@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 512 512" role="img" aria-label="Calendar Now Icon">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="100%" stop-color="#1A73E8"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34A853"/>
+      <stop offset="100%" stop-color="#0F9D58"/>
+    </linearGradient>
+    <filter id="s" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- calendar card -->
+  <rect x="128" y="96" width="256" height="320" rx="36" ry="36" fill="url(#g1)" filter="url(#s)"/>
+
+  <!-- header bar -->
+  <rect x="128" y="96" width="256" height="72" rx="36" ry="36" fill="url(#g2)"/>
+
+  <!-- binding rings -->
+  <g fill="#666" opacity="0.85">
+    <circle cx="192" cy="80" r="14"/>
+    <circle cx="256" cy="80" r="14"/>
+    <circle cx="320" cy="80" r="14"/>
+  </g>
+  <g fill="#fff">
+    <circle cx="192" cy="80" r="6"/>
+    <circle cx="256" cy="80" r="6"/>
+    <circle cx="320" cy="80" r="6"/>
+  </g>
+
+  <!-- grid dots -->
+  <g fill="#fff" opacity="0.95">
+    <g>
+      <circle cx="160" cy="200" r="8"/>
+      <circle cx="192" cy="200" r="8"/>
+      <circle cx="224" cy="200" r="8"/>
+      <circle cx="256" cy="200" r="8"/>
+      <circle cx="288" cy="200" r="8"/>
+      <circle cx="320" cy="200" r="8"/>
+      <circle cx="352" cy="200" r="8"/>
+    </g>
+    <g transform="translate(0,40)">
+      <circle cx="160" cy="200" r="8"/>
+      <circle cx="192" cy="200" r="8"/>
+      <circle cx="224" cy="200" r="8"/>
+      <circle cx="256" cy="200" r="8"/>
+      <circle cx="288" cy="200" r="8"/>
+      <circle cx="320" cy="200" r="8"/>
+      <circle cx="352" cy="200" r="8"/>
+    </g>
+    <g transform="translate(0,80)">
+      <circle cx="160" cy="200" r="8"/>
+      <circle cx="192" cy="200" r="8"/>
+      <circle cx="224" cy="200" r="8"/>
+      <circle cx="256" cy="200" r="8"/>
+      <circle cx="288" cy="200" r="8"/>
+      <circle cx="320" cy="200" r="8"/>
+      <circle cx="352" cy="200" r="8"/>
+    </g>
+    <g transform="translate(0,120)">
+      <circle cx="160" cy="200" r="8"/>
+      <circle cx="192" cy="200" r="8"/>
+      <circle cx="224" cy="200" r="8"/>
+      <circle cx="256" cy="200" r="8"/>
+      <circle cx="288" cy="200" r="8"/>
+      <circle cx="320" cy="200" r="8"/>
+      <circle cx="352" cy="200" r="8"/>
+    </g>
+  </g>
+
+  <!-- today marker -->
+  <circle cx="224" cy="240" r="12" fill="#FBBC05" opacity="0.9"/>
+  <circle cx="224" cy="240" r="6" fill="#fff"/>
+
+  <!-- compact tray indicator -->
+  <rect x="338" y="360" width="34" height="20" rx="5" ry="5" fill="#fff" opacity="0.95"/>
+  <circle cx="348" cy="370" r="3.5" fill="#34A853"/>
+  <circle cx="356" cy="370" r="3.5" fill="#4285F4"/>
+  <circle cx="364" cy="370" r="3.5" fill="#FBBC05"/>
+</svg>

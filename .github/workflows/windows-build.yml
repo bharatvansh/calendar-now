@@ -1,0 +1,50 @@
+name: Build Windows EXE and Installer
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.13'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pyinstaller
+
+    - name: Restore credentials (secret)
+      env:
+        CLIENT_CONFIG: ${{ secrets.CLIENT_CONFIG_JSON }}
+      run: |
+        if ($env:CLIENT_CONFIG) {
+          $clientPath = "resources\credentials\client_config.json"
+          New-Item -ItemType Directory -Force -Path (Split-Path $clientPath)
+          $env:CLIENT_CONFIG | Out-File -Encoding utf8 -FilePath $clientPath
+        } else {
+          Write-Error "CLIENT_CONFIG_JSON secret not set"
+        }
+
+    - name: Build with PyInstaller
+      run: |
+        pyinstaller --noconfirm CalendarNow.spec
+
+    - name: Compile installer
+      run: |
+        & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" ".\installer\calendar-now.iss"
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: CalendarNow-Installer
+        path: installer\Output\CalendarNow-Setup.exe

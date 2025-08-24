@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / build
+build/
+dist/
+*.spec
+CalendarNow.spec
+installer/Output/
+
+# Virtual env
+venv/
+env/
+\.venv/
+
+# Local credentials (DO NOT COMMIT)
+resources/credentials/client_config.json
+resources/credentials/credentials.json
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
