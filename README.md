@@ -1,5 +1,6 @@
 # Calendar Now
-
+ 
+[![Build Windows EXE and Installer](https://github.com/bharatvansh/calendar-now/actions/workflows/windows-build.yml/badge.svg)](https://github.com/bharatvansh/calendar-now/actions/workflows/windows-build.yml)
 Manage your Google Calendar from the system tray with a lightweight, polished desktop app built with PyQt5. It shows upcoming events, notifies you at the right time, and includes a minimal always-on-top overlay for your current task.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
